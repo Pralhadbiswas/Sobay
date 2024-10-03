@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Government Spardha-Pariksha</title>
+  <script src="https://kit.fontawesome.com/d97294832d.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="nav.css">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    .quiz-section {
+      margin-top: 40px;
+      padding: 20px;
+    }
+
+    .quiz-category {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+
+    .quiz-category h4 {
+      color: #482122;
+      margin-bottom: 10px;
+    }
+
+    .quiz-category p {
+      color: #666;
+    }
+
+    .btn-quiz {
+      background-color: #3463db;
+      color: white;
+      border-radius: 5px;
+      padding: 10px 20px;
+      text-transform: uppercase;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-quiz:hover {
+      background-color: #2980b9;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-light">
+    <div class="container">
+     
+      <a class="navbar-brand" href="#">
+        <img src="./assets/SABAY1-removebg-preview.png" alt="logo"  height="50px"
+          class="d-inline-block align-text-top" />
+        
+      </a>
+      <div class="ms-auto d-flex">
+        <form class="d-flex me-2">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+        </form>
+        <button class="btn btn-log me-2" type="button">
+          Log In or Register
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Second Navbar for Navigation Links -->
+  <nav class="navbar navbar-expand-lg navbar  mt-1">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav  ">
+          <li class="nav-item ">
+            <a class="nav-link   " aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="learnig.html">Learning</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  active" href="Quizes.html">Quiz Zone</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="notes.html">Notes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="pyq.html">Previous Question Papers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="imp.html">Important Topics</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Quiz Zone Section -->
+  <div class="container quiz-section">
+    <h2 class="text-center">Welcome to the Quiz Zone</h2>
+    <p class="text-center">
+      Test your knowledge with these interactive quizzes. Select a category
+      below to get started.
+    </p>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="quiz-category shadow">
+          <h4>General Knowledge</h4>
+          <p>
+            Test your general knowledge across various topics including
+            history, science, and current affairs.
+          </p>
+          <a href="#" class="btn btn-quiz">Start Quiz</a>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="quiz-category shadow">
+          <h4>Mathematics</h4>
+          <p>
+            Challenge your math skills with questions on algebra, arithmetic,
+            and problem-solving.
+          </p>
+          <a href="math.html" class="btn btn-quiz">Start Quiz</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-md-6">
+        <div class="quiz-category shadow">
+          <h4>Logical Reasoning</h4>
+          <p>
+            Improve your logical reasoning and analytical thinking with these
+            challenging
+          </p>
+          <a href="#" class="btn btn-quiz">Start Quiz</a>
+        </div>
+      </div>
+
+      <div class="col-md-6 ">
+        <div class="quiz-category shadow">
+          <h4>English Language</h4>
+          <p>
+            Test your proficiency in English grammar, vocabulary, and
+            comprehension.
+          </p>
+          <a href="#" class="btn btn-quiz">Start Quiz</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-md-6">
+        <div class="quiz-category shadow">
+          <h4>Current Affairs</h4>
+          <p>
+            Stay updated with the latest events and take a quiz on current
+            affairs.
+          </p>
+          <a href="#" class="btn btn-quiz">Start Quiz</a>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="quiz-category shadow">
+          <h4>Computer Awareness</h4>
+          <p>
+            Test your knowledge of computer fundamentals, the internet, and IT
+            applications.
+          </p>
+          <a href="#" class="btn btn-quiz">Start Quiz</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

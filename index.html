@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sobay Education</title>
+    <script
+      src="https://kit.fontawesome.com/d97294832d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="nav.css" />
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+      .container-fluid img {
+        height: 500px;
+        width: 100%;
+      }
+
+      .notice-board {
+        height: 400px;
+        overflow-y: scroll;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .notice-board h4 {
+        margin-bottom: 15px;
+      }
+
+      .right-section .btn {
+        width: 48%;
+        padding: 15px;
+
+        background-color: white;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 10px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+        text-align: left;
+      }
+
+      .right-section .btn:hover {
+        background-color: #fffbfb;
+      }
+
+      .button-group {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+      }
+
+      .button-group .fa-solid {
+        margin-right: 4px;
+      }
+
+      .button-group .fa-pen {
+        color: red;
+      }
+
+      .button-group .fa-ranking-star {
+        color: rgb(30, 123, 55);
+      }
+
+      .slide {
+        background-color: rgb(0, 0, 0);
+        color: white;
+        padding: 4px;
+      }
+
+      .exam-box {
+        background-color: #f8f9fa;
+        border: 1px solid #dee2e6;
+        padding: 20px;
+        height: 150px;
+      }
+
+      .exam-title {
+        font-size: 18px;
+        color: #ff0008;
+      }
+
+      .main {
+        /* background-color: #482122;
+       */
+        padding: 60px;
+        background-color: #15233e;
+
+        /* background-image: url(./assets/bgPattern.jpg); */
+
+        /* color: black; */
+      }
+
+      .exam-box {
+        border: 1px solid #000;
+        /* Example border, you can modify */
+        border-radius: 20px;
+        /* Rounded corners */
+        padding: 15px;
+        /* Add padding for a nicer look */
+      }
+
+      .notice-board img {
+        width: 32px;
+        height: 14px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="./assets/SABAY1-removebg-preview.png"
+            alt="logo"
+            height="50px"
+            class="d-inline-block align-text-top"
+          />
+        </a>
+        <div class="ms-auto d-flex">
+          <form class="d-flex me-2">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+          </form>
+          <button
+            class="btn btn-log me-2"
+            type="button"
+            data-bs-toggle="modal"
+            data-bs-target="#loginModal"
+          >
+            Log In or Register
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Second Navbar for Navigation Links -->
+    <nav class="navbar navbar-expand-lg navbar mt-1">
+      <div class="container">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="learnig.html">Learning Resources</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Quizes.html">Quiz Zone</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="notes.html">Notes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pyq.html">Previous Question Papers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="imp.html">Important Topics</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Modal for Log In -->
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      aria-labelledby="loginModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="loginModalLabel">Log In</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="loginEmail" class="form-label">Email address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="loginEmail"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="loginPassword" class="form-label">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="loginPassword"
+                  required
+                />
+              </div>
+              <button type="submit" class="btn btn-primary">Log In</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <p>
+              Don't have an account?
+              <a
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#registerModal"
+                data-bs-dismiss="modal"
+                >Register</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal for Register -->
+    <div
+      class="modal fade"
+      id="registerModal"
+      tabindex="-1"
+      aria-labelledby="registerModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="registerModalLabel">Register</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="registerEmail" class="form-label"
+                  >Email address</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="registerEmail"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="registerPassword" class="form-label"
+                  >Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="registerPassword"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="confirmPassword" class="form-label"
+                  >Confirm Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="confirmPassword"
+                  required
+                />
+              </div>
+              <button type="submit" class="btn btn-primary">Register</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <p>
+              Already have an account?
+              <a
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#loginModal"
+                data-bs-dismiss="modal"
+                >Log In</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid mt-1">
+      <img src="./assets/img2.jpg" alt="Government Exams" />
+    </div>
+    <div class="container-fluid">
+      <marquee behavior="" direction="" class="slide"
+        >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+        suscipit consectetur expedita?
+      </marquee>
+    </div>
+    <!-- Main Content with Notice Board and Buttons -->
+    <div class="container-fluid mt-4">
+      <div class="row">
+        <!-- Left Side Notice Board -->
+        <div class="col-lg-8">
+          <div class="notice-board">
+            <h4>Notice Board</h4>
+            <ul>
+              <li>
+                <a href="">New exam dates announced for MPSC exams 2024.</a>
+                <img src="./assets/new.gif" alt="" />
+              </li>
+              <li>
+                <a href="">Application deadline for banking exams extended.</a>
+                <img src="./assets/new.gif" alt="" />
+              </li>
+              <li>
+                Release of results for SSC exams 2023.
+                <img src="./assets/new.gif" alt="" />
+              </li>
+              <li>
+                Live lectures starting from 10th October 2024.
+                <img src="./assets/new.gif" alt="" />
+              </li>
+              <li>
+                Important syllabus updates for upcoming competitive exams.<img
+                  src="./assets/new.gif"
+                  alt=""
+                />
+              </li>
+
+              <li>New exam dates announced for MPSC exams 2024.</li>
+              <li>Application deadline for banking exams extended.</li>
+              <li>Release of results for SSC exams 2023.</li>
+              <li>Live lectures starting from 10th October 2024.</li>
+              <li>
+                Important syllabus updates for upcoming competitive exams.
+              </li>
+
+              <li>New exam dates announced for MPSC exams 2024.</li>
+              <li>Application deadline for banking exams extended.</li>
+              <li>Release of results for SSC exams 2023.</li>
+              <li>Live lectures starting from 10th October 2024.</li>
+              <li>
+                Important syllabus updates for upcoming competitive exams.
+              </li>
+              <li>New exam dates announced for MPSC exams 2024.</li>
+              <li>Application deadline for banking exams extended.</li>
+              <li>Release of results for SSC exams 2023.</li>
+              <li>Live lectures starting from 10th October 2024.</li>
+              <li>
+                Important syllabus updates for upcoming competitive exams.
+              </li>
+              <!-- Add more notices as needed -->
+            </ul>
+          </div>
+        </div>
+
+        <!-- Right Side Buttons -->
+        <div class="col-lg-4 right-section">
+          <h3>Quick Links</h3>
+          <div class="button-group">
+            <button class="btn btn">
+              <i class="fa-solid fa-pen"></i>Apply
+            </button>
+            <button class="btn btn">
+              <i class="fa-solid fa-ranking-star"></i>Result
+            </button>
+          </div>
+          <div class="button-group">
+            <button class="btn btn">
+              <i class="fa-solid fa-clipboard"></i>Answer Key
+            </button>
+            <button class="btn btn">
+              <i class="fa-solid fa-bell"></i>Notifications
+            </button>
+          </div>
+          <div class="button-group">
+            <button class="btn btn">
+              <i class="fa-solid fa-address-card"></i>Admit Card
+            </button>
+            <button class="btn btn">
+              <i class="fa-solid fa-circle-info"></i>Other Info
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid main mt-5">
+      <div class="row">
+        <!-- Left Side Heading Centered Vertically and Horizontally -->
+        <div
+          class="col-md-4 d-flex flex-column justify-content-center align-items-center text-white"
+        >
+          <h2 class="fs-1">Browse by Examinations</h2>
+          <p class="fs-6">
+            Explore exam-related details and relevant resources
+          </p>
+        </div>
+
+        <!-- Right Side Boxes -->
+        <div class="col-md-8">
+          <div class="row">
+            <!-- Box 1 -->
+            <div class="col-md-6 mb-3">
+              <div class="exam-box shadow">
+                <div class="exam-title">Police Bharti Process</div>
+                <p>
+                  Learn about the eligibility criteria, physical tests, and
+                  written exam process for Police recruitment.
+                </p>
+              </div>
+            </div>
+            <!-- Box 2 -->
+            <div class="col-md-6 mb-3">
+              <div class="exam-box shadow">
+                <div class="exam-title">
+                  MPSC (Maharashtra Public Service Commission)
+                </div>
+                <p>
+                  Get details on MPSC exams, including syllabus, exam pattern,
+                  and important dates.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <!-- Box 1 (Row 2) -->
+            <div class="col-md-6 mb-3">
+              <div class="exam-box shadow">
+                <div class="exam-title">Banking Exams</div>
+                <p>
+                  Understand the process for IBPS, SBI exams including prelims,
+                  mains, and interview stages.
+                </p>
+              </div>
+            </div>
+            <!-- Box 2 (Row 2) -->
+            <div class="col-md-6 mb-3">
+              <div class="exam-box shadow">
+                <div class="exam-title">Railway Recruitment</div>
+                <p>
+                  Know the selection process for RRB exams, including exam
+                  structure and qualifications.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <!-- Box 1 (Row 3) -->
+            <div class="col-md-6 mb-3">
+              <div class="exam-box shadow">
+                <div class="exam-title">Teacher Eligibility Test (TET)</div>
+                <p>
+                  Find information on the TET exams required to become a
+                  government teacher in Maharashtra.
+                </p>
+              </div>
+            </div>
+            <!-- Box 2 (Row 3) -->
+            <div class="col-md-6 mb-3">
+              <div class="exam-box shadow">
+                <div class="exam-title">Forest Department Recruitment</div>
+                <p>
+                  Learn about the recruitment process for forest officers and
+                  rangers, including exams and physical tests.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

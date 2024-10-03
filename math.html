@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Government Spardha-Pariksha - Math Quiz</title>
+  <script src="https://kit.fontawesome.com/d97294832d.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <style>
+    /* Reset default margin, padding, and ensure consistent box sizing */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    /* Sticky Navbar with dark background */
+    .navbar {
+      position: sticky;
+      top: 0;
+    }
+
+    .navbar-light {
+      background-color: #f8f0f0;
+    }
+
+    .navbar-expand-lg {
+      background-color: #482122;
+    }
+
+    .navbar-brand {
+      color: #fff;
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+    }
+
+    .navbar-nav .nav-item .nav-link {
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: 500;
+      position: relative;
+      transition: color 0.3s ease, transform 0.3s ease;
+      border-radius: 5px;
+    }
+
+    .navbar-nav .nav-item .nav-link:hover {
+      color: #007bff;
+      transform: translateY(-2px);
+    }
+
+    .navbar-nav .nav-item .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: #007bff;
+      left: 0;
+      bottom: 4px;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s ease;
+    }
+
+    .navbar-nav .nav-item .nav-link:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    .navbar-nav .nav-item .nav-link.active {
+      color: #ff6347;
+    }
+
+    .navbar-nav .nav-item .nav-link.active::after {
+      background-color: #ff6347;
+    }
+
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+
+    .quiz-container {
+      max-width: 800px;
+      margin: auto;
+      margin-top: 30px;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .quiz-question {
+      margin-bottom: 20px;
+    }
+
+    .quiz-submit {
+      margin-top: 20px;
+    }
+
+    .result-container {
+      margin-top: 30px;
+      background-color: #f1f1f1;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    input[type="radio"] {
+      accent-color: initial;
+    }
+
+    .correct input[type="radio"]:checked {
+      accent-color: green;
+    }
+
+    .incorrect input[type="radio"]:checked {
+      accent-color: red;
+    }
+
+    #timer {
+      font-size: 1.5rem;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #d9534f;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- First Navbar -->
+  <nav class="navbar navbar-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="./assets/SABAY1-removebg-preview.png" alt="" width="30" height="24"
+          class="d-inline-block align-text-top" />
+        
+      </a>
+      <div class="ms-auto d-flex">
+        <form class="d-flex me-2">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+        </form>
+        <button class="btn btn-log me-2" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">
+          Log In or Register
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Second Navbar for Navigation Links -->
+  <nav class="navbar navbar-expand-lg navbar-dark mt-1">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="learnig.html">Learning Resources</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Quizes.html">Quiz Zone</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="notes.html">Notes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pyq.html">Previous Question Papers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="imp.html">Important Topics</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Quiz Section -->
+  <div class="quiz-container">
+    <h1 class="text-center mb-4">Police Bharti Maharashtra - Math Quiz</h1>
+    <div id="timer">Time left: 30:00</div>
+    <form id="quizForm">
+      <!-- Question 1 -->
+      <div class="quiz-question" id="q1Container">
+        <h5>1. What is 25 * 4?</h5>
+        <div class="form-check">
+          <input type="radio" id="q1a" name="q1" value="50" class="form-check-input" required>
+          <label class="form-check-label" for="q1a">50</label>
+        </div>
+        <div class="form-check">
+          <input type="radio" id="q1b" name="q1" value="100" class="form-check-input">
+          <label class="form-check-label" for="q1b">100</label>
+        </div>
+        <div class="form-check">
+          <input type="radio" id="q1c" name="q1" value="75" class="form-check-input">
+          <label class="form-check-label" for="q1c">75</label>
+        </div>
+        <div class="form-check">
+          <input type="radio" id="q1d" name="q1" value="125" class="form-check-input">
+          <label class="form-check-label" for="q1d">125</label>
+        </div>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="quiz-question" id="q2Container">
+        <h5>2. What is the square root of 144?</h5>
+        <div class="form-check">
+          <input type="radio" id="q2a" name="q2" value="10" class="form-check-input" required>
+          <label class="form-check-label" for="q2a">10</label>
+        </div>
+        <div class="form-check">
+          <input type="radio" id="q2b" name="q2" value="12" class="form-check-input">
+          <label class="form-check-label" for="q2b">12</label>
+        </div>
+        <div class="form-check">
+          <input type="radio" id="q2c" name="q2" value="14" class="form-check-input">
+          <label class="form-check-label" for="q2c">14</label>
+        </div>
+        <div class="form-check">
+          <input type="radio" id="q2d" name="q2" value="16" class="form-check-input">
+          <label class="form-check-label" for="q2d">16</label>
+        </div>
+      </div>
+
+      <!-- Add 8 more questions in similar format -->
+
+      <button type="submit" class="btn btn-primary quiz-submit">Submit Quiz</button>
+    </form>
+    <div class="result-container" id="resultContainer" style="display:none;">
+      <h3>Your Score: <span id="score"></span>/10</h3>
+    </div>
+  </div>
+
+  <script>
+    // Timer for 30 minutes
+    let time = 30 * 60;
+    const timerEl = document.getElementById('timer');
+    const interval = setInterval(() => {
+      const minutes = Math.floor(time / 60);
+      const seconds = time % 60;
+      timerEl.textContent = `Time left: ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+      time--;
+      if (time < 0) {
+        clearInterval(interval);
+        alert("Time's up!");
+        document.getElementById('quizForm').submit();
+      }
+    }, 1000);
+
+    // Quiz submit logic
+    document.getElementById('quizForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      let score = 0;
+      const correctAnswers = ['100', '12']; // Add answers for all 10 questions
+      correctAnswers.forEach((answer, i) => {
+        const q = document.querySelector(`input[name="q${i + 1}"]:checked`);
+        if (q && q.value === answer) {
+          score++;
+        }
+      });
+      document.getElementById('score').textContent = score;
+      document.getElementById('resultContainer').style.display = 'block';
+    });
+  </script>
+</body>
+
+</html>

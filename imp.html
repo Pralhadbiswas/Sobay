@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Important Topics</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="nav.css">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    .topic-box {
+      background-color: #f8f9fa;
+      border: 1px solid #dee2e6;
+      padding: 20px;
+      border-radius: 15px;
+      margin-bottom: 15px;
+      transition: background-color 0.3s;
+    }
+
+    .topic-box:hover {
+      background-color: #e2e6ea;
+    }
+
+    .topic-title {
+      font-size: 18px;
+      color: #482122;
+      margin-bottom: 10px;
+    }
+
+    .main-section {
+      padding: 20px;
+    }
+
+    .category-title {
+      font-size: 22px;
+      color: #482122;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-light">
+    <div class="container">
+
+    
+      <a class="navbar-brand" href="#">
+        <img src="./assets/SABAY1-removebg-preview.png" alt="logo"  height="50px"
+          class="d-inline-block align-text-top" />
+        
+      </a>
+      <div class="ms-auto d-flex">
+        <form class="d-flex me-2">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+        </form>
+        <button class="btn btn-log me-2" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">
+          Log In or Register
+        </button>
+
+
+      </div>
+
+    </div>
+
+  </nav>
+
+  <!-- Second Navbar for Navigation Links -->
+  <nav class="navbar navbar-expand-lg navbar  mt-1">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav  ">
+          <li class="nav-item ">
+            <a class="nav-link " aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="learnig.html">Learning Resources</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="Quizes.html">Quiz Zone</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="notes.html">Notes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="pyq.html">Previous Question Papers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active  " href="imp.html">Important Topics</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </nav>
+ 
+
+  <!-- Main Section -->
+  <div class="container main-section">
+    <h2 class="text-center mb-4">Important Topics for Competitive Exams</h2>
+
+    <!-- Exam Categories -->
+    <div class="category">
+      <h3 class="category-title">1. Banking Exams</h3>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="topic-box">
+            <h4 class="topic-title">Quantitative Aptitude</h4>
+            <p>Cover important topics such as Number Series, Simplification, Data Interpretation, and Profit & Loss.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="topic-box">
+            <h4 class="topic-title">Reasoning Ability</h4>
+            <p>Focus on Puzzles, Seating Arrangements, Logical Reasoning, and Syllogisms.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="category">
+      <h3 class="category-title">2. Civil Services Exams</h3>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="topic-box">
+            <h4 class="topic-title">History and Polity</h4>
+            <p>Important areas include Ancient & Medieval History, Indian Constitution, and Governance.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="topic-box">
+            <h4 class="topic-title">Geography and Environment</h4>
+            <p>Prepare topics like Indian Geography, Physical Geography, and Environmental Conservation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="category">
+      <h3 class="category-title">3. SSC Exams</h3>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="topic-box">
+            <h4 class="topic-title">General Knowledge</h4>
+            <p>Key topics include Current Affairs, Indian Economy, Awards, and International Relations.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="topic-box">
+            <h4 class="topic-title">English Language</h4>
+            <p>Topics like Reading Comprehension, Grammar, Vocabulary, and Sentence Arrangement are important.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add more categories and topics as needed -->
+  </div>
+</body>
+
+</html>
