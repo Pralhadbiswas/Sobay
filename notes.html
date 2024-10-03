@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Government Exam Notes</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="nav.css">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+      
+      .main {
+        width: 90%;
+        max-width: 1200px;
+        padding: 40px;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .header-text {
+        text-align: center;
+        margin-bottom: 40px;
+        color: #482122;
+      }
+
+      .notes-section {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .note-box {
+        flex: 1 1 30%;
+        min-width: 250px;
+        background-color: #f5f5f5;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+        transition: transform 0.2s;
+      }
+
+      .note-box:hover {
+        transform: translateY(-5px);
+      }
+
+      .note-title {
+        font-size: 18px;
+        color: #482122;
+        margin-bottom: 10px;
+      }
+
+      .note-description {
+        font-size: 14px;
+        color: #333;
+      }
+
+      .btn-download {
+        margin-top: 15px;
+        text-decoration: none;
+        color: white;
+        background-color: #007bff;
+        padding: 8px 15px;
+        border-radius: 5px;
+        display: inline-block;
+      }
+
+      .btn-download:hover {
+        background-color: #0056b3;
+      }
+      
+      
+
+    </style>
+  </head>
+  <body>
+    
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-light">
+        <div class="container">
+       
+      <a class="navbar-brand" href="#">
+        <img src="./assets/SABAY1-removebg-preview.png" alt="logo"  height="50px"
+          class="d-inline-block align-text-top" />
+        
+      </a>
+          <div class="ms-auto d-flex">
+            <form class="d-flex me-2">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+            </form>
+            <button class="btn btn-log me-2" type="button">
+              Log In or Register
+            </button>
+          </div>
+        </div>
+      </nav>
+  
+      <!-- Second Navbar for Navigation Links -->
+      <nav class="navbar navbar-expand-lg navbar  mt-1">
+        <div class="container">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav  ">
+              <li class="nav-item ">
+                <a class="nav-link   " aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="learnig.html">Learning</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="Quizes.html">Quiz Zone</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active " href="notes.html">Notes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="pyq.html">Previous Question Papers</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="imp.html">Important Topics</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+  
+    <div class="container main">
+      <h2 class="header-text">Government Exam Notes</h2>
+      <p class="text-center">Download notes for various subjects to help you prepare for government competitive exams.</p>
+
+      <div class="notes-section">
+        <!-- Note 1 -->
+        <div class="note-box">
+          <div class="note-title">General Studies - History</div>
+          <p class="note-description">Comprehensive notes covering ancient, medieval, and modern history.</p>
+          <a href="pdfs/general-studies-history.pdf" class="btn-download" download>
+            Download Notes (PDF)
+          </a>
+        </div>
+
+        <!-- Note 2 -->
+        <div class="note-box">
+          <div class="note-title">Geography</div>
+          <p class="note-description">Detailed notes on physical geography, Indian geography, and world geography.</p>
+          <a href="pdfs/geography-notes.pdf" class="btn-download" download>
+            Download Notes (PDF)
+          </a>
+        </div>
+
+        <!-- Note 3 -->
+        <div class="note-box">
+          <div class="note-title">Polity</div>
+          <p class="note-description">Important notes on the Indian constitution, governance, and political systems.</p>
+          <a href="pdfs/polity-notes.pdf" class="btn-download" download>
+            Download Notes (PDF)
+          </a>
+        </div>
+
+        <!-- Note 4 -->
+        <div class="note-box">
+          <div class="note-title">Economics</div>
+          <p class="note-description">Understand key economic concepts and government policies.</p>
+          <a href="pdfs/economics-notes.pdf" class="btn-download" download>
+            Download Notes (PDF)
+          </a>
+        </div>
+
+        <!-- Note 5 -->
+        <div class="note-box">
+          <div class="note-title">Science & Technology</div>
+          <p class="note-description">Study notes on general science, latest technological developments, and innovations.</p>
+          <a href="pdfs/science-technology-notes.pdf" class="btn-download" download>
+            Download Notes (PDF)
+          </a>
+        </div>
+
+        <!-- Note 6 -->
+        <div class="note-box">
+          <div class="note-title">Current Affairs</div>
+          <p class="note-description">Stay updated with important events and news relevant for your exam preparation.</p>
+          <a href="pdfs/current-affairs-notes.pdf" class="btn-download" download>
+            Download Notes (PDF)
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
