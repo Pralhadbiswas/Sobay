@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In Popup Form</title>
+  <style>
+    /* Basic page styling */
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f2f2f2;
+    }
+
+    /* Popup form styling */
+    .popup-form {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .form-content {
+      background-color: #f7fbff;
+      padding: 30px;
+      border-radius: 10px;
+      width: 300px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .form-content h2 {
+      margin: 0;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .form-content p {
+      margin: 0;
+      margin-bottom: 20px;
+      color: #666;
+      font-size: 14px;
+    }
+
+    .form-content label {
+      display: block;
+      text-align: left;
+      margin-top: 10px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .form-content input[type="text"],
+    .form-content input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+
+    .form-content button {
+      width: 100%;
+      padding: 10px;
+      background-color: #1a73e8;
+      border: none;
+      color: white;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .form-content button:hover {
+      background-color: #155bb5;
+    }
+
+    .close-btn {
+      background-color: red;
+      float: right;
+      padding: 5px;
+      border: none;
+      color: white;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .forgot-password,
+    .sign-up {
+      display: block;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .forgot-password {
+      color: #ff9800;
+      text-decoration: none;
+    }
+
+    .sign-up {
+      color: #1a73e8;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Button to open the form -->
+  <button onclick="openForm()">Open Sign In Form</button>
+
+  <!-- Sign In Popup Form -->
+  <div id="popupForm" class="popup-form">
+    <div class="form-content">
+      <button class="close-btn" onclick="closeForm()">&times;</button>
+      <h2>Welcome Back!</h2>
+      <p>Sign in to your account and join us</p>
+      <label for="email">Enter Your Email ID</label>
+      <input type="text" id="email" placeholder="Enter Your Email..." required>
+      <label for="password">Enter Your Password</label>
+      <input type="password" id="password" placeholder="Enter Your Password..." required>
+      <a href="#" class="forgot-password">Forget password</a>
+      <button type="submit">Sign In</button>
+      <p>Don't have an account? <a href="#" class="sign-up">Sign Up</a></p>
+    </div>
+  </div>
+
+  <script>
+    // Function to open the popup form
+    function openForm() {
+      document.getElementById('popupForm').style.display = 'flex';
+    }
+
+    // Function to close the popup form
+    function closeForm() {
+      document.getElementById('popupForm').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
